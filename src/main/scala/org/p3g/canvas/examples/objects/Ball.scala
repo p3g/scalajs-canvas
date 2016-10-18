@@ -1,9 +1,12 @@
-package org.p3g.canvas.examples.objects
+package org.p3g.canvas.examples.objects;
 
-class Ball(val size:Int,var x:Int, var y:Int ) extends Body {
+import org.p3g.canvas.examples.physics.Velocity;
+import org.p3g.canvas.examples.physics.Position;
+
+class Ball(val size:Int, var position:Position, var velocity:Velocity ) extends Body {
   override def getSize: Int = this.size
 
-  override def getX: Int = this.x
+  override def getPosition: Position = this.position
 
-  override def getY: Int = this.y
+  override def getVelocity: Velocity = this.velocity
 }
